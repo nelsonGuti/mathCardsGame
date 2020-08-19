@@ -1,0 +1,13 @@
+@import "../../../styles.scss";
+
+.card-container {
+  background-color: $light-background;
+  height: 70vh;
+
+  p {
+    margin: 0;
+    color: $light-headline;
+    padding: 1.5rem 0;
+    text-align: center;
+  }
+}

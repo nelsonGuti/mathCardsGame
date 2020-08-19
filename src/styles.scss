@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+$background-color: #232946;
+$headline: #fffffe;
+$paragraph: #b8c1ec;
+$button: #eebbc3;
+$button-text: #232946;
+
+$light-background: #d4d8f0;
+$light-headline: #232946;
+$light-sub-headline: #232946;
+$card-background: #fffffe;
+$card-heading: #232946;
+$card-paragraph: #232946;
+
+// html {
+//   background: $background-color;
+// }
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+}
