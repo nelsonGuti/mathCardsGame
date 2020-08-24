@@ -1,0 +1,12 @@
+<div class="scene">
+  <div
+    class="card"
+    (click)="this.flipped = !this.flipped"
+    [ngClass]="flipped ? 'is-flipped' : null"
+  >
+    <div class="card__face card__face--front"><app-card></app-card></div>
+    <div class="card__face card__face--back">
+      <app-answer-card></app-answer-card>
+    </div>
+  </div>
+</div>
