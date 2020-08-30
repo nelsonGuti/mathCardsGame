@@ -7,6 +7,7 @@ import { CardContainerComponent } from './components/card-container/card-contain
 import { CardComponent } from './components/card/card.component';
 import { FlipCardComponent } from './components/flip-card/flip-card.component';
 import { AnswerCardComponent } from './components/answer-card/answer-card.component';
+import { QuestionCardComponent } from './components/question-card/question-card.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AnswerCardComponent } from './components/answer-card/answer-card.compon
     CardContainerComponent,
     CardComponent,
     FlipCardComponent,
-    AnswerCardComponent
+    AnswerCardComponent,
+    QuestionCardComponent
   ],
   imports: [
     BrowserModule
