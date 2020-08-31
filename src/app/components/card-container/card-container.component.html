@@ -1,9 +1,19 @@
 <div class="card-container">
   <p>Toggle the card to start playing</p>
+  <button type="button" class="btn btn-bordered" (click)="getNewCards($event)">
+    Next card
+  </button>
 
-  <app-flip-card></app-flip-card>
-  <app-flip-card></app-flip-card>
-  <app-flip-card></app-flip-card>
-  <app-flip-card></app-flip-card>
-  <app-flip-card></app-flip-card>
+  <app-flip-card>
+    <ng-template app-flip-card-front>
+      <app-question-card
+        [firstNumerator]="cardValues.firstNum"
+        [secondNumerator]="cardValues.secondNum"
+        operator="+"
+      ></app-question-card>
+    </ng-template>
+    <ng-template app-flip-card-back>
+      <app-answer-card [answer]="cardValues.answer"></app-answer-card>
+    </ng-template>
+  </app-flip-card>
 </div>
