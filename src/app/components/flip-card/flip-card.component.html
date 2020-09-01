@@ -5,10 +5,6 @@
     [ngClass]="flipped ? 'is-flipped' : null"
   >
     <div class="card__face card__face--front">
-      <!-- <app-question-card
-        firstNUmerator="11"
-        secondNUmerator="22"
-      ></app-question-card> -->
       <ng-container *ngTemplateOutlet="frontCardTpl"></ng-container>
     </div>
     <div class="card__face card__face--back">
