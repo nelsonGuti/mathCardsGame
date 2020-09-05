@@ -1,0 +1,14 @@
+@import "../../../styles.scss";
+
+.grid-container {
+  padding: 3rem 0 1rem 0;
+  display: flex;
+  justify-content: center;
+  background-color: $light-background;
+  color: $card-paragraph;
+  column-gap: 2rem;
+  flex-direction: row;
+  .grid-container-item {
+    font-size: 60px;
+  }
+}

@@ -8,7 +8,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  font-size: 75px;
+  font-size: 85px;
+  font-weight: bold;
   align-items: center;
   justify-items: center;
 
@@ -27,5 +28,10 @@
     &.border-bottom {
       border-bottom: 3px solid black;
     }
+  }
+
+  fa-icon {
+    display: flex;
+    font-size: 60px;
   }
 }

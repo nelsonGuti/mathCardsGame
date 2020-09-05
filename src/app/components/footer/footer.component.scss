@@ -1,0 +1,12 @@
+@import "../../../styles.scss";
+
+.footer-container {
+  background-color: $background-color;
+  color: $paragraph;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  p {
+    margin: 0;
+  }
+}

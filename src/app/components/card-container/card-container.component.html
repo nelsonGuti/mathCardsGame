@@ -4,12 +4,12 @@
     Next card
   </button>
 
-  <app-flip-card>
+  <app-flip-card [reset]="reset">
     <ng-template app-flip-card-front>
       <app-question-card
         [firstNumerator]="cardValues.firstNum"
         [secondNumerator]="cardValues.secondNum"
-        operator="+"
+        [operator]="operator"
       ></app-question-card>
     </ng-template>
     <ng-template app-flip-card-back>

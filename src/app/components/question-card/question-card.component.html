@@ -1,7 +1,9 @@
 <div class="card-grid-container">
   <div class="grid-item"></div>
   <div class="grid-item first">{{ firstNumerator }}</div>
-  <div class="grid-item border-bottom">{{ operator }}</div>
+  <div class="grid-item border-bottom">
+    <fa-icon [icon]="operatorIcon"></fa-icon>
+  </div>
   <div class="grid-item border-bottom">{{ secondNumerator }}</div>
 
   <div class="grid-item"></div>

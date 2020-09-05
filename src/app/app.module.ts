@@ -9,6 +9,9 @@ import { AnswerCardComponent } from './components/answer-card/answer-card.compon
 import { QuestionCardComponent } from './components/question-card/question-card.component';
 
 import { FlipCardModule } from './components/flip-card/flip-card.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { OperatorsComponent } from './components/operators/operators.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +20,10 @@ import { FlipCardModule } from './components/flip-card/flip-card.module';
     CardContainerComponent,
     AnswerCardComponent,
     QuestionCardComponent,
+    OperatorsComponent,
+    FooterComponent,
   ],
-  imports: [BrowserModule, FlipCardModule],
+  imports: [BrowserModule, FlipCardModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
 })
