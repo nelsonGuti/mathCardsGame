@@ -2,7 +2,7 @@
   <div class="grid-item"></div>
   <div class="grid-item first">{{ firstNumerator }}</div>
   <div class="grid-item border-bottom">
-    <fa-icon [icon]="operatorIcon"></fa-icon>
+    <fa-icon *ngIf="operation" [icon]="operation.icon"></fa-icon>
   </div>
   <div class="grid-item border-bottom">{{ secondNumerator }}</div>
 

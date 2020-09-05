@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { Operation } from 'src/app/models/Operation';
 
 @Component({
   selector: 'app-question-card',
@@ -9,9 +9,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 export class QuestionCardComponent implements OnInit {
   @Input() firstNumerator: number;
   @Input() secondNumerator: number;
-  @Input() operator: string;
-
-  operatorIcon = faPlus;
+  @Input() operation: Operation;
 
   constructor() {}
 

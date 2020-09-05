@@ -1,4 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { CalculationsService } from 'src/app/services/calculations.service';
+import { Operation } from 'src/app/models/Operation';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { Operator } from 'src/app/models/Operator';
 
 interface CardsValues {
   firstNum: number;
@@ -13,38 +17,42 @@ interface CardsValues {
 })
 export class CardContainerComponent implements OnInit {
   reset = false;
-  operator = '+';
+
+  operation: Operation = {
+    icon: faPlus,
+    name: Operator.ADDITION,
+    disabled: false,
+  };
 
   cardValues: CardsValues = {
     firstNum: 1,
     secondNum: 1,
     answer: 2,
   };
-  constructor() {}
+  constructor(private calculationsService: CalculationsService) {}
 
   ngOnInit(): void {}
 
-  getNewCards(event) {
-    console.log('event: ', event);
-    setTimeout(() => {
-      const firstNum = this.generateRandomNumber(1, 10);
-      const secondNum = this.generateRandomNumber(1, 10);
-      const answer = firstNum + secondNum;
-      this.cardValues.firstNum = firstNum;
-      this.cardValues.secondNum = secondNum;
-      this.cardValues.answer = answer;
-      this.operator = '+';
-    }, 1000);
+  getNewCards() {
+    switch (this.operation.name) {
+      case Operator.ADDITION:
+        this.cardValues = this.calculationsService.createAdditionCard();
 
-    this.cardValues.firstNum = null;
-    this.cardValues.secondNum = null;
-    this.cardValues.answer = null;
-    this.operator = null;
+        break;
+      case Operator.SUBTRACTION:
+        this.cardValues = this.calculationsService.createSubtractionCard();
+
+        break;
+      default:
+        this.cardValues = { firstNum: null, secondNum: null, answer: null };
+    }
+
     this.reset = !this.reset;
   }
 
-  generateRandomNumber(min, max): number {
-    const randomNum = Math.random() * (max - min) + min;
-    return Math.floor(randomNum);
+  getSelectedOperation(operation): void {
+    console.log(operation);
+    this.operation = operation;
+    this.getNewCards();
   }
 }

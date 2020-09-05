@@ -6,9 +6,21 @@
   justify-content: center;
   background-color: $light-background;
   color: $card-paragraph;
-  column-gap: 2rem;
+  column-gap: 1rem;
   flex-direction: row;
   .grid-container-item {
     font-size: 60px;
+    padding: 1rem;
+    &:hover {
+      cursor: pointer;
+    }
+    &.selected {
+      background-color: $card-paragraph;
+      color: $light-background;
+    }
+    &.disabled {
+      opacity: 0.5;
+      cursor: auto;
+    }
   }
 }

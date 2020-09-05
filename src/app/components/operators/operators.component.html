@@ -1,6 +1,13 @@
 <div class="grid-container">
-  <div class="grid-container-item"><fa-icon [icon]="faPlus"></fa-icon></div>
-  <div class="grid-container-item"><fa-icon [icon]="faMinus"></fa-icon></div>
-  <div class="grid-container-item"><fa-icon [icon]="faTimes"></fa-icon></div>
-  <div class="grid-container-item"><fa-icon [icon]="faDivide"></fa-icon></div>
+  <div
+    *ngFor="let operation of operations"
+    class="grid-container-item"
+    [ngClass]="{
+      selected: selectedOperation === operation.name,
+      disabled: operation.disabled
+    }"
+    (click)="selectOperation($event, operation)"
+  >
+    <fa-icon [icon]="operation.icon"></fa-icon>
+  </div>
 </div>

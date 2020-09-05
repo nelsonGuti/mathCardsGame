@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Operation } from './../../models/Operation';
+import { Operator } from 'src/app/models/Operator';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faMinus } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -10,12 +12,24 @@ import { faDivide } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./operators.component.scss'],
 })
 export class OperatorsComponent implements OnInit {
-  faPlus = faPlus;
-  faMinus = faMinus;
-  faDivide = faDivide;
-  faTimes = faTimes;
-
+  @Output() operationChange = new EventEmitter();
+  operations: Operation[] = [
+    { icon: faPlus, name: Operator.ADDITION, disabled: false },
+    { icon: faMinus, name: Operator.SUBTRACTION, disabled: false },
+    { icon: faTimes, name: Operator.MULTIPLICATION, disabled: true },
+    { icon: faDivide, name: Operator.DIVISION, disabled: true },
+  ];
+  selectedOperation = Operator.ADDITION;
   constructor() {}
 
   ngOnInit(): void {}
+
+  selectOperation(e, operation) {
+    if (operation.disabled) {
+      return;
+    }
+
+    this.selectedOperation = operation.name;
+    this.operationChange.emit(operation);
+  }
 }

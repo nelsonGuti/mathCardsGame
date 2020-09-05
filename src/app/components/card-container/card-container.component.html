@@ -1,6 +1,9 @@
 <div class="card-container">
+  <app-operators
+    (operationChange)="getSelectedOperation($event)"
+  ></app-operators>
   <p>Toggle the card to start playing</p>
-  <button type="button" class="btn btn-bordered" (click)="getNewCards($event)">
+  <button type="button" class="btn btn-bordered" (click)="getNewCards()">
     Next card
   </button>
 
@@ -9,7 +12,7 @@
       <app-question-card
         [firstNumerator]="cardValues.firstNum"
         [secondNumerator]="cardValues.secondNum"
-        [operator]="operator"
+        [operation]="operation"
       ></app-question-card>
     </ng-template>
     <ng-template app-flip-card-back>
