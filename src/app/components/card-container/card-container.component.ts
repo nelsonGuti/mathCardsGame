@@ -34,9 +34,7 @@ export class CardContainerComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  getNewCards(e?) {
-    e.preventDefault();
-
+  getNewCards() {
     switch (this.operation.name) {
       case Operator.ADDITION:
         this.cardValues = this.calculationsService.createAdditionCard();
@@ -54,7 +52,6 @@ export class CardContainerComponent implements OnInit {
   }
 
   getSelectedOperation(operation): void {
-    console.log(operation);
     this.operation = operation;
     this.getNewCards();
   }
