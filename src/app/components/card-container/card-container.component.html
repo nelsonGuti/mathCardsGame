@@ -3,8 +3,8 @@
     (operationChange)="getSelectedOperation($event)"
   ></app-operators>
   <p>Toggle the card to start playing</p>
-  <button type="button" class="btn btn-bordered" (click)="getNewCards()">
-    Next card
+  <button type="button" class="btn" (click)="getNewCards($event)">
+    <fa-icon [icon]="faRedo"></fa-icon>
   </button>
 
   <app-flip-card [reset]="reset">

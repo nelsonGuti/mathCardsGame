@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { CalculationsService } from 'src/app/services/calculations.service';
 import { Operation } from 'src/app/models/Operation';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faRedo } from '@fortawesome/free-solid-svg-icons';
 import { Operator } from 'src/app/models/Operator';
 
 interface CardsValues {
@@ -17,6 +17,7 @@ interface CardsValues {
 })
 export class CardContainerComponent implements OnInit {
   reset = false;
+  faRedo = faRedo;
 
   operation: Operation = {
     icon: faPlus,
@@ -33,7 +34,9 @@ export class CardContainerComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  getNewCards() {
+  getNewCards(e?) {
+    e.preventDefault();
+
     switch (this.operation.name) {
       case Operator.ADDITION:
         this.cardValues = this.calculationsService.createAdditionCard();

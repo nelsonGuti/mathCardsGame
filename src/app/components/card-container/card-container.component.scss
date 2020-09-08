@@ -21,8 +21,19 @@
   button {
     width: 100px;
     margin: 0 auto;
+    background-color: $card-paragraph;
+    color: $light-background;
+    padding: 0.75rem;
+    border: 1px solid $background-color;
+    border-radius: 5px;
+    font-size: 35px;
     &:hover {
       cursor: pointer;
+    }
+    &:focus {
+      outline: none !important;
+      -webkit-box-shadow: none !important;
+      box-shadow: none !important;
     }
   }
 }
