@@ -13,7 +13,7 @@ export class AnswerCardComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     setTimeout(() => {
       this.answer = changes.answer.currentValue;
-    }, 1000);
+    }, 700);
     this.answer = null;
   }
 }

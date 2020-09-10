@@ -16,7 +16,7 @@ export class OperatorsComponent implements OnInit {
   operations: Operation[] = [
     { icon: faPlus, name: Operator.ADDITION, disabled: false },
     { icon: faMinus, name: Operator.SUBTRACTION, disabled: false },
-    { icon: faTimes, name: Operator.MULTIPLICATION, disabled: true },
+    { icon: faTimes, name: Operator.MULTIPLICATION, disabled: false },
     { icon: faDivide, name: Operator.DIVISION, disabled: true },
   ];
   selectedOperation = Operator.ADDITION;

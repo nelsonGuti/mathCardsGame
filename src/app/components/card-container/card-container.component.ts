@@ -38,11 +38,12 @@ export class CardContainerComponent implements OnInit {
     switch (this.operation.name) {
       case Operator.ADDITION:
         this.cardValues = this.calculationsService.createAdditionCard();
-
         break;
       case Operator.SUBTRACTION:
         this.cardValues = this.calculationsService.createSubtractionCard();
-
+        break;
+      case Operator.MULTIPLICATION:
+        this.cardValues = this.calculationsService.createMultiplicationCard();
         break;
       default:
         this.cardValues = { firstNum: null, secondNum: null, answer: null };

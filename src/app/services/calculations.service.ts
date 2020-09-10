@@ -13,8 +13,8 @@ export class CalculationsService {
   }
 
   createAdditionCard(): CardNumbers {
-    const firstNum = this.generateRandomNumber(1, 10);
-    const secondNum = this.generateRandomNumber(1, 10);
+    const firstNum = this.generateRandomNumber(0, 10);
+    const secondNum = this.generateRandomNumber(0, 10);
     const answer = firstNum + secondNum;
     return { firstNum, secondNum, answer };
   }
@@ -23,6 +23,13 @@ export class CalculationsService {
     const firstNum = this.generateRandomNumber(1, 10);
     const secondNum = this.generateRandomNumber(0, firstNum);
     const answer = firstNum - secondNum;
+    return { firstNum, secondNum, answer };
+  }
+
+  createMultiplicationCard(): CardNumbers {
+    const firstNum = this.generateRandomNumber(1, 5);
+    const secondNum = this.generateRandomNumber(1, 5);
+    const answer = firstNum * secondNum;
     return { firstNum, secondNum, answer };
   }
 }
