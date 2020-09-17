@@ -32,4 +32,13 @@ export class CalculationsService {
     const answer = firstNum * secondNum;
     return { firstNum, secondNum, answer };
   }
+
+  createDivisionCard(): CardNumbers {
+    const {
+      firstNum,
+      secondNum,
+      answer: product,
+    } = this.createMultiplicationCard();
+    return { firstNum: product, secondNum, answer: firstNum };
+  }
 }

@@ -45,6 +45,9 @@ export class CardContainerComponent implements OnInit {
       case Operator.MULTIPLICATION:
         this.cardValues = this.calculationsService.createMultiplicationCard();
         break;
+      case Operator.DIVISION:
+        this.cardValues = this.calculationsService.createDivisionCard();
+        break;
       default:
         this.cardValues = { firstNum: null, secondNum: null, answer: null };
     }
