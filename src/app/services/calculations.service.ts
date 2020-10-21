@@ -27,8 +27,8 @@ export class CalculationsService {
   }
 
   createMultiplicationCard(): CardNumbers {
-    const firstNum = this.generateRandomNumber(1, 5);
-    const secondNum = this.generateRandomNumber(1, 5);
+    const firstNum = this.generateRandomNumber(1, 8);
+    const secondNum = this.generateRandomNumber(1, 8);
     const answer = firstNum * secondNum;
     return { firstNum, secondNum, answer };
   }
