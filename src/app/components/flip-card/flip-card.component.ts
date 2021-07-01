@@ -1,11 +1,9 @@
 import {
   Component,
-  OnInit,
   Input,
   TemplateRef,
   ContentChild,
-  AfterContentInit,
-  SimpleChanges,
+  OnChanges,
 } from '@angular/core';
 
 import { FlipCardBackDirective } from './flip-card-back.directive';
@@ -16,7 +14,7 @@ import { FlipCardFrontDirective } from './flip-card-front.directive';
   templateUrl: './flip-card.component.html',
   styleUrls: ['./flip-card.component.scss'],
 })
-export class FlipCardComponent implements AfterContentInit {
+export class FlipCardComponent implements OnChanges {
   @ContentChild(FlipCardBackDirective, { read: TemplateRef, static: true })
   backCardTpl: TemplateRef<any>;
 
@@ -27,12 +25,9 @@ export class FlipCardComponent implements AfterContentInit {
   flipped = false;
   constructor() {}
 
-  // tslint:disable-next-line: use-lifecycle-interface
-  ngOnChanges(changes: SimpleChanges) {
+  ngOnChanges() {
     if (this.flipped) {
       this.flipped = false;
     }
   }
-
-  ngAfterContentInit() {}
 }
