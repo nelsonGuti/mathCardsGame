@@ -8,14 +8,14 @@
   </button>
 
   <app-flip-card [reset]="reset">
-    <ng-template app-flip-card-front>
+    <ng-template appFlipCardFront>
       <app-question-card
         [firstNumerator]="cardValues.firstNum"
         [secondNumerator]="cardValues.secondNum"
         [operation]="operation"
       ></app-question-card>
     </ng-template>
-    <ng-template app-flip-card-back>
+    <ng-template appFlipCardBack>
       <app-answer-card [answer]="cardValues.answer"></app-answer-card>
     </ng-template>
   </app-flip-card>

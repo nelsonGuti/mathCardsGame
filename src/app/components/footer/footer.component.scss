@@ -3,7 +3,7 @@
 .footer-container {
   background-color: $background-color;
   color: $paragraph;
-  padding: 3rem;
+  padding: 1rem 0 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,14 +17,14 @@
     display: inline-block;
     text-align: center;
     .heart {
-      padding-right: 0.5rem;
+      padding-left: 2px;
     }
   }
   a {
     text-decoration: none;
     color: $paragraph;
     transition: width 2s;
-    &:hover {
+    &.profile-link:hover {
       border-bottom: 1px solid $paragraph;
     }
   }
