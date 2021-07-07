@@ -1,8 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { CalculationsService } from 'src/app/services/calculations.service';
 import { Operation } from 'src/app/models/Operation';
-import { faPlus, faRedo } from '@fortawesome/free-solid-svg-icons';
 import { Operator } from 'src/app/models/Operator';
+import { faPlus, faRedo } from '@fortawesome/free-solid-svg-icons';
 
 interface CardsValues {
   firstNum: number;

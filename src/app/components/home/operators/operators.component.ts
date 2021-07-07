@@ -1,10 +1,10 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Operation } from './../../models/Operation';
 import { Operator } from 'src/app/models/Operator';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faMinus } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faDivide } from '@fortawesome/free-solid-svg-icons';
+import { Operation } from 'src/app/models/Operation';
 
 @Component({
   selector: 'app-operators',
