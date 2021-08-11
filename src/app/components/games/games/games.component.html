@@ -1,3 +1,13 @@
 <div class="header-container">
-  <h1>Games</h1>
+  <h1>Game on!</h1>
+
+  <app-operators
+    (operationChange)="getSelectedOperation($event)"
+  ></app-operators>
+
+  <app-question-card
+    firstNumerator="2"
+    secondNumerator="1"
+    [operation]="operation"
+  ></app-question-card>
 </div>
