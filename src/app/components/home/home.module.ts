@@ -9,23 +9,28 @@ import { OperatorsComponent } from './operators/operators.component';
 import { QuestionCardComponent } from './question-card/question-card.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { QuestionCardModule } from './question-card/question-card.module';
+import { OperatorsModule } from './operators/operators.module';
 @NgModule({
-  imports: [CommonModule, FlipCardModule, FontAwesomeModule, AppRoutingModule],
+  imports: [
+    CommonModule,
+    FlipCardModule,
+    FontAwesomeModule,
+    AppRoutingModule,
+    QuestionCardModule,
+    OperatorsModule,
+  ],
   declarations: [
     AnswerCardComponent,
     CardContainerComponent,
     FooterComponent,
     HeaderComponent,
-    OperatorsComponent,
-    QuestionCardComponent,
   ],
   exports: [
     AnswerCardComponent,
     CardContainerComponent,
     FooterComponent,
     HeaderComponent,
-    OperatorsComponent,
-    QuestionCardComponent,
   ],
 })
 export class HomeModule {}

@@ -1,0 +1,11 @@
+@import "../../../../styles.scss";
+.header-container {
+  @include header;
+  align-items: center;
+}
+
+app-question-card {
+  padding-top: 3rem;
+  width: 250px;
+  height: 300px;
+}
