@@ -5,7 +5,7 @@ import { CardContainerComponent } from './components/home/card-container/card-co
 import { SettingsComponent } from './components/settings/settings/settings.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: CardContainerComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'games', component: GamesComponent },
