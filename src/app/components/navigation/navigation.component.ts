@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { faCog, faHome, faGamepad } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -10,7 +11,11 @@ export class NavigationComponent implements OnInit {
   faCog = faCog;
   faHome = faHome;
   faGamepad = faGamepad;
-  constructor() {}
+
+  get route() {
+    return this.router.url;
+  }
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 }

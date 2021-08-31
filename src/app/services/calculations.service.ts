@@ -13,15 +13,15 @@ export class CalculationsService {
   }
 
   createAdditionCard(): CardNumbers {
-    const firstNum = this.generateRandomNumber(0, 10);
-    const secondNum = this.generateRandomNumber(0, 10);
+    const firstNum = this.generateRandomNumber(0, 18);
+    const secondNum = this.generateRandomNumber(0, 9);
     const answer = firstNum + secondNum;
     return { firstNum, secondNum, answer };
   }
 
   createSubtractionCard(): CardNumbers {
-    const firstNum = this.generateRandomNumber(1, 10);
-    const secondNum = this.generateRandomNumber(0, firstNum);
+    const firstNum = this.generateRandomNumber(1, 18);
+    const secondNum = this.generateRandomNumber(0, 9);
     const answer = firstNum - secondNum;
     return { firstNum, secondNum, answer };
   }

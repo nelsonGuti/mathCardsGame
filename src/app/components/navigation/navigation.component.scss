@@ -8,8 +8,14 @@
     column-gap: 1rem;
   }
   a {
+    padding: 10px;
     text-decoration: none;
     color: $headline;
     font-size: $router-link-font-size;
+
+    &.selected {
+      background-color: $card-paragraph;
+      color: $light-background;
+    }
   }
 }
