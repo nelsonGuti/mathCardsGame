@@ -21,7 +21,7 @@ export class CalculationsService {
 
   createSubtractionCard(): CardNumbers {
     const firstNum = this.generateRandomNumber(1, 18);
-    const secondNum = this.generateRandomNumber(0, 9);
+    const secondNum = this.generateRandomNumber(0, firstNum);
     const answer = firstNum - secondNum;
     return { firstNum, secondNum, answer };
   }
