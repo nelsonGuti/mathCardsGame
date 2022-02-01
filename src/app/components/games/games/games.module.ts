@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GamesComponent } from './games.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
-import { HomeModule } from '../../home/home.module';
 import { QuestionCardModule } from '../../home/question-card/question-card.module';
 import { OperatorsModule } from '../../home/operators/operators.module';
+import { NumberSelectModule } from '../number-select/number-select.module';
 
 @NgModule({
   declarations: [GamesComponent],
@@ -14,6 +14,7 @@ import { OperatorsModule } from '../../home/operators/operators.module';
     CommonModule,
     QuestionCardModule,
     OperatorsModule,
+    NumberSelectModule,
   ],
   exports: [GamesComponent],
 })

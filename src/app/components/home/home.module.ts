@@ -5,8 +5,7 @@ import { CardContainerComponent } from './card-container/card-container.componen
 import { FlipCardModule } from './flip-card/flip-card.module';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import { OperatorsComponent } from './operators/operators.component';
-import { QuestionCardComponent } from './question-card/question-card.component';
+
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { QuestionCardModule } from './question-card/question-card.module';

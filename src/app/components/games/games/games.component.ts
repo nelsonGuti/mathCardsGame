@@ -20,12 +20,17 @@ export class GamesComponent implements OnInit {
     disabled: false,
   };
 
+  input: number;
+
   constructor() {}
 
   ngOnInit(): void {}
 
   getSelectedOperation(operation): void {
     this.operation = operation;
-    console.log('this.operation: ', this.operation);
+  }
+
+  userInput(num) {
+    this.input = num;
   }
 }
