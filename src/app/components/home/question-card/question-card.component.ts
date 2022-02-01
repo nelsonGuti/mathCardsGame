@@ -10,4 +10,6 @@ export class QuestionCardComponent {
   @Input() firstNumerator: number;
   @Input() secondNumerator: number;
   @Input() operation: Operation;
+  @Input() gameMode = false;
+  @Input() userInput: number;
 }

@@ -7,5 +7,7 @@
   <div class="grid-item border-bottom">{{ secondNumerator }}</div>
 
   <div class="grid-item"></div>
-  <div class="grid-item"></div>
+  <div *ngIf="gameMode && userInput" class="grid-item answer">
+    {{ userInput }}
+  </div>
 </div>

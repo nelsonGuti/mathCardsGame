@@ -9,5 +9,9 @@
     firstNumerator="2"
     secondNumerator="1"
     [operation]="operation"
+    [gameMode]="true"
+    [userInput]="input"
   ></app-question-card>
+
+  <app-number-select (numberInput)="userInput($event)"></app-number-select>
 </div>
