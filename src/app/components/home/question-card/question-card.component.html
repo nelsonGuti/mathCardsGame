@@ -1,4 +1,10 @@
-<div class="card-grid-container">
+<div
+  class="card-grid-container"
+  [ngClass]="{
+    'wrong-answer': status === 'wrong',
+    'correct-answer': status === 'correct'
+  }"
+>
   <div class="grid-item"></div>
   <div class="grid-item first">{{ firstNumerator }}</div>
   <div class="grid-item border-bottom">
@@ -7,7 +13,10 @@
   <div class="grid-item border-bottom">{{ secondNumerator }}</div>
 
   <div class="grid-item"></div>
-  <div *ngIf="gameMode && userInput" class="grid-item answer">
+  <div
+    *ngIf="(gameMode && userInput) || (gameMode && userInput === 0)"
+    class="grid-item answer"
+  >
     {{ userInput }}
   </div>
 </div>

@@ -5,7 +5,47 @@
 }
 
 app-question-card {
-  padding-top: 3rem;
+  padding-top: 2rem;
   width: 250px;
   height: 300px;
+}
+
+.enter-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.input-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  row-gap: 5px;
+}
+
+.game-prep-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 25px;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  padding: 10px;
+  background-color: #ebedf2;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+}
+
+.end-game-button {
+  margin-top: 25px;
 }

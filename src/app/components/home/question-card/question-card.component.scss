@@ -1,7 +1,7 @@
 @import "../../../../styles.scss";
 
 .card-grid-container {
-  background-color: $card-background;
+  background-color: $card-background; // #EAFFF1
   border-radius: 1rem;
   padding: 0 2rem;
   // height: 300px;
@@ -28,14 +28,18 @@
     &.border-bottom {
       border-bottom: 3px solid black;
     }
-
-    // &.answer {
-    //   grid-column: 1 / span 2;
-    // }
   }
 
   fa-icon {
     display: flex;
     font-size: 60px;
   }
+}
+
+.wrong-answer {
+  background-color: rgb(233, 169, 169);
+}
+
+.correct-answer {
+  background-color: #bdebcc;
 }
