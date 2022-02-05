@@ -4,7 +4,7 @@ import { Operation } from 'src/app/models/Operation';
 import { Operator } from 'src/app/models/Operator';
 import { faPlus, faRedo } from '@fortawesome/free-solid-svg-icons';
 
-interface CardsValues {
+export interface CardsValues {
   firstNum: number;
   secondNum: number;
   answer: number;
@@ -30,6 +30,7 @@ export class CardContainerComponent implements OnInit {
     secondNum: 1,
     answer: 2,
   };
+
   constructor(private calculationsService: CalculationsService) {}
 
   ngOnInit(): void {}

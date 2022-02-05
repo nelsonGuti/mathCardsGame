@@ -12,4 +12,6 @@ export class QuestionCardComponent {
   @Input() operation: Operation;
   @Input() gameMode = false;
   @Input() userInput: number;
+  @Input() answer: number;
+  @Input() status;
 }

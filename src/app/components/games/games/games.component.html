@@ -1,17 +1,54 @@
 <div class="header-container">
-  <h1>Game on!</h1>
+  <h1>{{ gameStarted ? "Game On" : "Are you ready?" }}</h1>
 
-  <app-operators
-    (operationChange)="getSelectedOperation($event)"
-  ></app-operators>
+  <div *ngIf="!gameStarted" class="game-prep-container">
+    <p>Choose a category to play the game</p>
+    <app-operators
+      (operationChange)="getSelectedOperation($event)"
+    ></app-operators>
+    <button (click)="gameStarted = !gameStarted" type="button">
+      Start Game!
+    </button>
+  </div>
 
-  <app-question-card
-    firstNumerator="2"
-    secondNumerator="1"
-    [operation]="operation"
-    [gameMode]="true"
-    [userInput]="input"
-  ></app-question-card>
+  <div *ngIf="gameStarted" class="game-container">
+    <button
+      class="end-game-button"
+      (click)="gameStarted = !gameStarted"
+      type="button"
+    >
+      End Game!
+    </button>
+    <app-question-card
+      [status]="cardStatus"
+      [firstNumerator]="cardValues.firstNum"
+      [secondNumerator]="cardValues.secondNum"
+      [operation]="operation"
+      [gameMode]="true"
+      [userInput]="answer"
+      [answer]="cardValues.answer"
+    ></app-question-card>
 
-  <app-number-select (numberInput)="userInput($event)"></app-number-select>
+    <div class="input-container">
+      <app-number-select (numberInput)="userInput($event)"></app-number-select>
+      <button (click)="deleteAnswer()" type="button">Delete</button>
+    </div>
+
+    <div class="enter-button-container">
+      <button
+        *ngIf="cardStatus !== 'correct'"
+        (click)="onEnter()"
+        type="button"
+      >
+        Enter
+      </button>
+      <button
+        *ngIf="cardStatus === 'correct'"
+        (click)="nextCard()"
+        type="button"
+      >
+        Next
+      </button>
+    </div>
+  </div>
 </div>
