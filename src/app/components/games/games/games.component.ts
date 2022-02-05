@@ -122,4 +122,9 @@ export class GamesComponent implements OnInit {
     this.reset();
     this.getNewCards();
   }
+
+  endGame() {
+    this.gameStarted = !this.gameStarted;
+    this.reset();
+  }
 }

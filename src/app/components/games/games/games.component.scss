@@ -14,6 +14,7 @@ app-question-card {
   display: flex;
   justify-content: center;
   margin-top: 25px;
+  column-gap: 5px;
 }
 
 .input-container {
@@ -23,6 +24,7 @@ app-question-card {
   align-items: center;
   align-content: center;
   row-gap: 5px;
+  width: 250px;
 }
 
 .game-prep-container {

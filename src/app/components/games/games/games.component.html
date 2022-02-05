@@ -6,9 +6,7 @@
     <app-operators
       (operationChange)="getSelectedOperation($event)"
     ></app-operators>
-    <button (click)="gameStarted = !gameStarted" type="button">
-      Start Game!
-    </button>
+    <button (click)="endGame()" type="button">Start Game!</button>
   </div>
 
   <div *ngIf="gameStarted" class="game-container">
@@ -31,10 +29,10 @@
 
     <div class="input-container">
       <app-number-select (numberInput)="userInput($event)"></app-number-select>
-      <button (click)="deleteAnswer()" type="button">Delete</button>
     </div>
 
     <div class="enter-button-container">
+      <button (click)="deleteAnswer()" type="button">Delete</button>
       <button
         *ngIf="cardStatus !== 'correct'"
         (click)="onEnter()"
