@@ -13,22 +13,22 @@ export class CalculationsService {
   }
 
   createAdditionCard(): CardNumbers {
-    const firstNum = this.generateRandomNumber(0, 18);
+    const firstNum = this.generateRandomNumber(0, 10);
     const secondNum = this.generateRandomNumber(0, 9);
     const answer = firstNum + secondNum;
     return { firstNum, secondNum, answer };
   }
 
   createSubtractionCard(): CardNumbers {
-    const firstNum = this.generateRandomNumber(1, 18);
+    const firstNum = this.generateRandomNumber(1, 10);
     const secondNum = this.generateRandomNumber(0, firstNum);
     const answer = firstNum - secondNum;
     return { firstNum, secondNum, answer };
   }
 
   createMultiplicationCard(): CardNumbers {
-    const firstNum = this.generateRandomNumber(1, 8);
-    const secondNum = this.generateRandomNumber(1, 8);
+    const firstNum = this.generateRandomNumber(1, 5);
+    const secondNum = this.generateRandomNumber(1, 5);
     const answer = firstNum * secondNum;
     return { firstNum, secondNum, answer };
   }
