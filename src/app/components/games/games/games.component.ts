@@ -105,10 +105,14 @@ export class GamesComponent implements OnInit {
   onEnter() {
     if (this.answer === this.cardValues.answer) {
       this.cardStatus = 'correct';
+      setTimeout(() => {
+        this.nextCard();
+      }, 1500);
     } else {
-      this.answer = null;
-      this.answerArray = [];
       this.cardStatus = 'wrong';
+      setTimeout(() => {
+        this.reset();
+      }, 1000);
     }
   }
 
@@ -126,5 +130,6 @@ export class GamesComponent implements OnInit {
   endGame() {
     this.gameStarted = !this.gameStarted;
     this.reset();
+    this.getNewCards();
   }
 }
