@@ -31,7 +31,6 @@ app-question-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 25px;
 }
 
 .game-container {
@@ -46,6 +45,7 @@ button {
   cursor: pointer;
   border-radius: 5px;
   outline: none;
+  margin-top: 25px;
 }
 
 .end-game-button {

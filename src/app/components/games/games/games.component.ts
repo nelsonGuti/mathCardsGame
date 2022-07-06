@@ -65,8 +65,9 @@ export class GamesComponent implements OnInit {
     // this.reset = !this.reset;
   }
 
-  @HostListener('window:keyup', ['$event'])
+  @HostListener('window:keydown', ['$event'])
   handleKeyboardEvent(e: KeyboardEvent) {
+    console.log('e: ', e.key);
     if (e.key === 'Backspace') {
       this.deleteAnswer();
     }
@@ -107,12 +108,12 @@ export class GamesComponent implements OnInit {
       this.cardStatus = 'correct';
       setTimeout(() => {
         this.nextCard();
-      }, 1500);
+      }, 500);
     } else {
       this.cardStatus = 'wrong';
       setTimeout(() => {
         this.reset();
-      }, 1000);
+      }, 500);
     }
   }
 
