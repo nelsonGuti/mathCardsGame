@@ -1,0 +1,17 @@
+<div class="difficulty-container">
+  <label id="example-radio-group-label">Pick the difficulty</label>
+  <mat-radio-group
+    aria-labelledby="example-radio-group-label"
+    class="example-radio-group"
+    [(ngModel)]="difficulty"
+    (change)="onDifficultyChange($event)"
+  >
+    <mat-radio-button
+      class="example-radio-button"
+      *ngFor="let difficulty of difficulties"
+      [value]="difficulty"
+    >
+      {{ difficulty }}
+    </mat-radio-button>
+  </mat-radio-group>
+</div>

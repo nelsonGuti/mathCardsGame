@@ -9,9 +9,11 @@ import { HomeModule } from './components/home/home.module';
 import { SettingsModule } from './components/settings/settings.module';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { GamesModule } from './components/games/games/games.module';
+import { HeaderComponent } from './components/header/header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [AppComponent, NavigationComponent, NavigationComponent],
+  declarations: [AppComponent, NavigationComponent, HeaderComponent],
   imports: [
     BrowserModule,
     HomeModule,
@@ -19,6 +21,7 @@ import { GamesModule } from './components/games/games/games.module';
     AppRoutingModule,
     SettingsModule,
     GamesModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

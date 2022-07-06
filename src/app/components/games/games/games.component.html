@@ -1,8 +1,6 @@
 <div class="header-container">
-  <h1>{{ gameStarted ? "Game On" : "Are you ready?" }}</h1>
-
   <div *ngIf="!gameStarted" class="game-prep-container">
-    <p>Choose a category to play the game</p>
+    <app-difficulty></app-difficulty>
     <app-operators
       (operationChange)="getSelectedOperation($event)"
     ></app-operators>
