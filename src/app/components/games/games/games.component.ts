@@ -9,13 +9,20 @@ import { Operation } from 'src/app/models/Operation';
 import { Operator } from 'src/app/models/Operator';
 import { CalculationsService } from 'src/app/services/calculations.service';
 import { CardsValues } from '../../home/card-container/card-container.component';
+import { NumberSelectComponent } from '../number-select/number-select.component';
+import { QuestionCardComponent } from '../../home/question-card/question-card.component';
+import { OperatorsComponent } from '../../home/operators/operators.component';
+import { DifficultyComponent } from '../../difficulty/difficulty.component';
+import { NgIf } from '@angular/common';
 
 const NUMBERS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 @Component({
-  selector: 'app-games',
-  templateUrl: './games.component.html',
-  styleUrls: ['./games.component.scss'],
+    selector: 'app-games',
+    templateUrl: './games.component.html',
+    styleUrls: ['./games.component.scss'],
+    standalone: true,
+    imports: [NgIf, DifficultyComponent, OperatorsComponent, QuestionCardComponent, NumberSelectComponent]
 })
 export class GamesComponent implements OnInit {
   operation: Operation = {

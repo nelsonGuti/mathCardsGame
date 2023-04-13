@@ -3,6 +3,13 @@ import { CalculationsService } from 'src/app/services/calculations.service';
 import { Operation } from 'src/app/models/Operation';
 import { Operator } from 'src/app/models/Operator';
 import { faPlus, faRedo } from '@fortawesome/free-solid-svg-icons';
+import { AnswerCardComponent } from '../answer-card/answer-card.component';
+import { FlipCardBackDirective } from '../flip-card/flip-card-back.directive';
+import { QuestionCardComponent } from '../question-card/question-card.component';
+import { FlipCardFrontDirective } from '../flip-card/flip-card-front.directive';
+import { FlipCardComponent } from '../flip-card/flip-card.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { OperatorsComponent } from '../operators/operators.component';
 
 export interface CardsValues {
   firstNum: number;
@@ -11,9 +18,11 @@ export interface CardsValues {
 }
 
 @Component({
-  selector: 'app-card-container',
-  templateUrl: './card-container.component.html',
-  styleUrls: ['./card-container.component.scss'],
+    selector: 'app-card-container',
+    templateUrl: './card-container.component.html',
+    styleUrls: ['./card-container.component.scss'],
+    standalone: true,
+    imports: [OperatorsComponent, FontAwesomeModule, FlipCardComponent, FlipCardFrontDirective, QuestionCardComponent, FlipCardBackDirective, AnswerCardComponent]
 })
 export class CardContainerComponent implements OnInit {
   reset = false;

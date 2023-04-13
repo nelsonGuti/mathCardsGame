@@ -8,8 +8,8 @@ describe('OperatorsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ OperatorsComponent ]
-    })
+    imports: [OperatorsComponent]
+})
     .compileComponents();
   }));
 

@@ -1,12 +1,44 @@
-import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
-import { AppModule } from './app/app.module';
+import { enableProdMode, importProvidersFrom } from '@angular/core';
 import { environment } from './environments/environment';
+import { AppComponent } from './app/app.component';
+import { provideAnimations } from '@angular/platform-browser/animations';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
+import { provideRouter, Routes } from '@angular/router';
 
 if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  {
+    path: 'home',
+    loadComponent: () =>
+      import(
+        './app/components/home/card-container/card-container.component'
+      ).then((m) => m.CardContainerComponent),
+  },
+  {
+    path: 'settings',
+    loadComponent: () =>
+      import('./app/components/settings/settings/settings.component').then(
+        (m) => m.SettingsComponent
+      ),
+  },
+  {
+    path: 'games',
+    loadComponent: () =>
+      import('./app/components/games/games/games.component').then(
+        (m) => m.GamesComponent
+      ),
+  },
+];
+
+bootstrapApplication(AppComponent, {
+  providers: [
+    importProvidersFrom(BrowserModule, FontAwesomeModule),
+    provideRouter(routes),
+    provideAnimations(),
+  ],
+}).catch((err) => console.error(err));

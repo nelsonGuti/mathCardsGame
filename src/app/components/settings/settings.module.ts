@@ -5,8 +5,7 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
 import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
-  imports: [CommonModule, AppRoutingModule, FontAwesomeModule],
-  declarations: [SettingsComponent],
-  exports: [SettingsComponent],
+    imports: [CommonModule, AppRoutingModule, FontAwesomeModule, SettingsComponent],
+    exports: [SettingsComponent]
 })
 export class SettingsModule {}
