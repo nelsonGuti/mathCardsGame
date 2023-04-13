@@ -13,17 +13,18 @@ import { HeaderComponent } from './components/header/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [AppComponent, NavigationComponent, HeaderComponent],
-  imports: [
-    BrowserModule,
-    HomeModule,
-    FontAwesomeModule,
-    AppRoutingModule,
-    SettingsModule,
-    GamesModule,
-    BrowserAnimationsModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
+    declarations: [AppComponent],
+    imports: [
+        BrowserModule,
+        HomeModule,
+        FontAwesomeModule,
+        AppRoutingModule,
+        SettingsModule,
+        GamesModule,
+        BrowserAnimationsModule,
+        NavigationComponent, HeaderComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule {}

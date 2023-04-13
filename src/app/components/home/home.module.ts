@@ -11,15 +11,15 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
 import { QuestionCardModule } from './question-card/question-card.module';
 import { OperatorsModule } from './operators/operators.module';
 @NgModule({
-  imports: [
-    CommonModule,
-    FlipCardModule,
-    FontAwesomeModule,
-    AppRoutingModule,
-    QuestionCardModule,
-    OperatorsModule,
-  ],
-  declarations: [AnswerCardComponent, CardContainerComponent, FooterComponent],
-  exports: [AnswerCardComponent, CardContainerComponent, FooterComponent],
+    imports: [
+        CommonModule,
+        FlipCardModule,
+        FontAwesomeModule,
+        AppRoutingModule,
+        QuestionCardModule,
+        OperatorsModule,
+        AnswerCardComponent, CardContainerComponent, FooterComponent
+    ],
+    exports: [AnswerCardComponent, CardContainerComponent, FooterComponent]
 })
 export class HomeModule {}

@@ -4,8 +4,7 @@ import { NumberSelectComponent } from './number-select.component';
 import { NumberInputComponent } from './number-input/number-input.component';
 
 @NgModule({
-  declarations: [NumberSelectComponent, NumberInputComponent],
-  imports: [CommonModule],
-  exports: [NumberSelectComponent, NumberInputComponent],
+    imports: [CommonModule, NumberSelectComponent, NumberInputComponent],
+    exports: [NumberSelectComponent, NumberInputComponent]
 })
 export class NumberSelectModule {}

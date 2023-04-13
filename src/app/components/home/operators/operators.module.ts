@@ -4,8 +4,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { OperatorsComponent } from './operators.component';
 
 @NgModule({
-  imports: [CommonModule, FontAwesomeModule],
-  declarations: [OperatorsComponent],
-  exports: [OperatorsComponent],
+    imports: [CommonModule, FontAwesomeModule, OperatorsComponent],
+    exports: [OperatorsComponent]
 })
 export class OperatorsModule {}

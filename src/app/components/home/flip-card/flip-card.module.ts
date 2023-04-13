@@ -5,12 +5,9 @@ import { FlipCardBackDirective } from './flip-card-back.directive';
 import { FlipCardFrontDirective } from './flip-card-front.directive';
 
 @NgModule({
-  declarations: [
-    FlipCardComponent,
-    FlipCardBackDirective,
-    FlipCardFrontDirective,
-  ],
-  exports: [FlipCardComponent, FlipCardBackDirective, FlipCardFrontDirective],
-  imports: [CommonModule],
+    exports: [FlipCardComponent, FlipCardBackDirective, FlipCardFrontDirective],
+    imports: [CommonModule, FlipCardComponent,
+        FlipCardBackDirective,
+        FlipCardFrontDirective]
 })
 export class FlipCardModule {}

@@ -8,8 +8,8 @@ describe('FlipCardComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ FlipCardComponent ]
-    })
+    imports: [FlipCardComponent]
+})
     .compileComponents();
   }));
 

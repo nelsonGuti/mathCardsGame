@@ -8,16 +8,16 @@ import { NumberSelectModule } from '../number-select/number-select.module';
 import { DifficultyModule } from '../../difficulty/difficulty.module';
 
 @NgModule({
-  declarations: [GamesComponent],
-  imports: [
-    CommonModule,
-    AppRoutingModule,
-    CommonModule,
-    QuestionCardModule,
-    OperatorsModule,
-    NumberSelectModule,
-    DifficultyModule,
-  ],
-  exports: [GamesComponent],
+    imports: [
+        CommonModule,
+        AppRoutingModule,
+        CommonModule,
+        QuestionCardModule,
+        OperatorsModule,
+        NumberSelectModule,
+        DifficultyModule,
+        GamesComponent
+    ],
+    exports: [GamesComponent]
 })
 export class GamesModule {}

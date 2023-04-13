@@ -4,8 +4,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { QuestionCardComponent } from './question-card.component';
 
 @NgModule({
-  imports: [CommonModule, FontAwesomeModule],
-  declarations: [QuestionCardComponent],
-  exports: [QuestionCardComponent],
+    imports: [CommonModule, FontAwesomeModule, QuestionCardComponent],
+    exports: [QuestionCardComponent]
 })
 export class QuestionCardModule {}

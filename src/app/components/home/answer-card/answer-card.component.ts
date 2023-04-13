@@ -1,9 +1,10 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'app-answer-card',
-  templateUrl: './answer-card.component.html',
-  styleUrls: ['./answer-card.component.scss'],
+    selector: 'app-answer-card',
+    templateUrl: './answer-card.component.html',
+    styleUrls: ['./answer-card.component.scss'],
+    standalone: true
 })
 export class AnswerCardComponent implements OnChanges {
   @Input() answer: number;
